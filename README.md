@@ -25,7 +25,7 @@ import safety from "@guimauvedigital/eslint-plugin-safety"
 
 export default [
     // Keep existing rules, only add the plugin
-    safety,
+    safety.configs.recommended,
 ];
 ```
 
