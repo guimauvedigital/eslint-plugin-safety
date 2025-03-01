@@ -11,7 +11,7 @@ const plugin = {
     },
 };
 
-Object.assign(plugin.config, {
+Object.assign(plugin.configs, {
     recommended: {
         plugins: {safety: plugin},
         rules: {
