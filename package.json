@@ -1,0 +1,17 @@
+{
+  "name": "@guimauvedigital/eslint-plugin-safety",
+  "version": "1.0.0",
+  "description": "ES Lint rules we use at Guimauve Digital - A monster against bad code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nathan Fallet",
+  "keywords": [
+    "eslint",
+    "eslint-plugin"
+  ],
+  "devDependencies": {
+    "eslint": "^9.21.0"
+  }
+}
