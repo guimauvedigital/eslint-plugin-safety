@@ -13,5 +13,10 @@
   ],
   "devDependencies": {
     "eslint": "^9.21.0"
+  },
+  "homepage": "https://github.com/guimauvedigital/eslint-plugin-safety",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guimauvedigital/eslint-plugin-safety.git"
   }
 }
