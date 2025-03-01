@@ -1,7 +1,7 @@
 {
   "name": "@guimauvedigital/eslint-plugin-safety",
-  "version": "1.0.0",
-  "description": "ES Lint rules we use at Guimauve Digital - A monster against bad code",
+  "version": "1.0.1",
+  "description": "ESLint rules we use at Guimauve Digital - A monster against bad code",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

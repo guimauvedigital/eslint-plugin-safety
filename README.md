@@ -1,4 +1,4 @@
-# ES Lint rules we use at Guimauve Digital
+# ESLint rules we use at Guimauve Digital
 
 A monster against bad code
 
@@ -44,7 +44,9 @@ Checkout [typescript-eslint](https://typescript-eslint.io) plugin for more TypeS
 
 ### TypeScript Reset
 
-Install [it](https://www.totaltypescript.com/ts-reset) with `npm i -D @total-typescript/ts-reset` and create a
+[ts-reset](https://www.totaltypescript.com/ts-reset) is a package that adds extra TypeScript checks about typings.
+
+Install it with `npm i -D @total-typescript/ts-reset` and create a
 `reset.d.ts` file:
 
 ```ts
