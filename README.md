@@ -2,23 +2,31 @@
 
 A monster against bad code
 
+## Install ESLint first
+
+```bash
+npm init @eslint/config@latest
+```
+
+Follow the base instructions and choose the options you want.
+
 ## Install the plugin
 
 ```bash
 npm install @guimauvedigital/eslint-plugin-safety --save-dev
 ```
 
-## Add the plugin to your `.eslintrc.js` file
+## Add the plugin
+
+Update your `eslint.config.mjs` file to add the plugin:
 
 ```js
-module.exports = {
-    plugins: ["@guimauvedigital/safety"],
-    rules: {
-        // You can enable the rules you want here
-        // See /lib/rules for the list of available rules
-        "@guimauvedigital/safety/validate-json-parse": "error"
-    }
-};
+import safety from "@guimauvedigital/eslint-plugin-safety"
+
+export default [
+    // Keep existing rules, only add the plugin
+    safety,
+];
 ```
 
 ## Bonuses
@@ -41,6 +49,9 @@ Update `tsconfig.json` and add the following settings:
 ### TypeScript ESLint plugin
 
 Checkout [typescript-eslint](https://typescript-eslint.io) plugin for more TypeScript specific rules.
+
+This is often already installed when you create a new project with `npm init @eslint/config@latest` if TypeScript is
+selected.
 
 ### TypeScript Reset
 
