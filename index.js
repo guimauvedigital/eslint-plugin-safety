@@ -1,4 +1,6 @@
-const fs = require("fs");
+import fs from "fs";
+import validateJsonParse from "./lib/rules/validate-json-parse";
+
 const pkg = JSON.parse(fs.readFileSync(new URL("./package.json", import.meta.url), "utf8"));
 
 const plugin = {
@@ -7,17 +9,18 @@ const plugin = {
         version: pkg.version
     },
     rules: {
-        "validate-json-parse": require("./lib/rules/validate-json-parse"),
+        "validate-json-parse": validateJsonParse,
     },
-};
+}
 
-Object.assign(plugin.configs, {
+const configs = {
     recommended: {
         plugins: {safety: plugin},
         rules: {
             "@guimauvedigital/safety/validate-json-parse": "error"
         }
     }
-})
+}
 
-module.exports = plugin;
+export {configs}
+export default plugin
