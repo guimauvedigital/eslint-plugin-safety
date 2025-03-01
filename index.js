@@ -1,5 +1,5 @@
 import fs from "fs";
-import validateJsonParse from "./lib/rules/validate-json-parse";
+import validateJsonParse from "./lib/rules/validate-json-parse.js";
 
 const pkg = JSON.parse(fs.readFileSync(new URL("./package.json", import.meta.url), "utf8"));
 
@@ -21,6 +21,7 @@ const configs = {
         }
     }
 }
+plugin.configs = configs
 
 export {configs}
 export default plugin
