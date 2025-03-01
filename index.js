@@ -17,7 +17,7 @@ const configs = {
     recommended: {
         plugins: {safety: plugin},
         rules: {
-            "@guimauvedigital/safety/validate-json-parse": "error"
+            "safety/validate-json-parse": "error"
         }
     }
 }
