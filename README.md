@@ -21,12 +21,29 @@ npm install @guimauvedigital/eslint-plugin-safety --save-dev
 Update your `eslint.config.mjs` file to add the plugin:
 
 ```js
+import globals from "globals"
+import pluginJs from "@eslint/js"
+import tseslint from "typescript-eslint"
 import safety from "@guimauvedigital/eslint-plugin-safety"
 
 export default [
-    // Keep existing rules, only add the plugin
-    safety.configs.recommended,
-];
+    {
+        files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+        languageOptions: {
+            globals: {...globals.browser, ...globals.node},
+            parser: "@typescript-eslint/parser",
+            parserOptions: {
+                projectService: true,
+                tsconfigRootDir: import.meta.dirname,
+                project: "./tsconfig.json",
+            },
+        }
+    },
+    pluginJs.configs.recommended,
+    ...tseslint.configs.strictTypeChecked,
+    ...safety.configs.all,
+    // Optionally add more rules
+]
 ```
 
 ## Bonuses
@@ -41,6 +58,7 @@ Update `tsconfig.json` and add the following settings:
 {
   "compilerOptions": {
     "strict": true,
+    "strictNullChecks": true,
     "noUncheckedIndexedAccess": true
   }
 }
