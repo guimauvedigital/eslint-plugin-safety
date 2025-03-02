@@ -22,8 +22,6 @@ Update your `eslint.config.mjs` file to add the plugin:
 
 ```js
 import globals from "globals"
-import pluginJs from "@eslint/js"
-import tseslint from "typescript-eslint"
 import safety from "@guimauvedigital/eslint-plugin-safety"
 
 export default [
@@ -39,10 +37,8 @@ export default [
             },
         }
     },
-    pluginJs.configs.recommended,
-    ...tseslint.configs.strictTypeChecked,
     ...safety.configs.all,
-    // Optionally add more rules
+    // Optionally add more rules specific to your project
 ]
 ```
 
@@ -69,7 +65,7 @@ Update `tsconfig.json` and add the following settings:
 Checkout [typescript-eslint](https://typescript-eslint.io) plugin for more TypeScript specific rules.
 
 This is often already installed when you create a new project with `npm init @eslint/config@latest` if TypeScript is
-selected.
+selected. We include it in our `all` configuration.
 
 ### TypeScript Reset
 
