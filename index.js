@@ -26,13 +26,19 @@ const configs = {
         rules: {
             "@typescript-eslint/strict-boolean-expressions": "error"
         }
-    })
+    }),
+    core: [{
+        rules: {
+            "camelcase": "error"
+        }
+    }],
 }
 configs.all = [
     pluginJs.configs.recommended,
     ...tseslint.configs.strictTypeChecked,
     ...configs.owns,
-    ...configs.tsExtras
+    ...configs.tsExtras,
+    ...configs.core,
 ]
 plugin.configs = configs
 

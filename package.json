@@ -1,6 +1,6 @@
 {
   "name": "@guimauvedigital/eslint-plugin-safety",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "ESLint rules we use at Guimauve Digital - A monster against bad code",
   "main": "index.js",
   "scripts": {
