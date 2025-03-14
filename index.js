@@ -1,9 +1,10 @@
 import fs from "fs"
 import validateJsonParse from "./lib/rules/validate-json-parse.js"
+import preferNullable from "./lib/rules/prefer-nullable.js"
 import pluginJs from "@eslint/js"
 import tseslint from "typescript-eslint"
 
-const pkg = JSON.parse(fs.readFileSync(new URL("./package.json", import.meta.url), "utf8"));
+const pkg = JSON.parse(fs.readFileSync(new URL("./package.json", import.meta.url), "utf8"))
 
 const plugin = {
     meta: {
@@ -12,6 +13,7 @@ const plugin = {
     },
     rules: {
         "validate-json-parse": validateJsonParse,
+        "prefer-nullable": preferNullable
     },
 }
 
@@ -20,6 +22,7 @@ const configs = {
         plugins: {safety: plugin},
         rules: {
             "safety/validate-json-parse": "error",
+            "safety/prefer-nullable": "error"
         }
     }],
     tsExtras: tseslint.config({

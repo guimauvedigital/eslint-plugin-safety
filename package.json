@@ -1,6 +1,6 @@
 {
   "name": "@guimauvedigital/eslint-plugin-safety",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "ESLint rules we use at Guimauve Digital - A monster against bad code",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,7 @@
   ],
   "dependencies": {
     "@eslint/js": "^9.21.0",
+    "@typescript-eslint/utils": "^8.26.1",
     "typescript-eslint": "^8.25.0"
   },
   "devDependencies": {
